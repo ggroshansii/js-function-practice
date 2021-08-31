@@ -13,17 +13,6 @@
   // Define a function max() that takes two numbers as arguments and returns the largest of them. Use the if-then-else construct available in Javascript.
   // ---------------------
 
-  //Calculate the largest number of the two parameters
-  // function max(num1, num2) {
-  //   if (typeof num1 !== 'number' || typeof num2 !== 'number') {
-  //     console.log("At leat one argument is not a number");
-  //   } else if (num1 > num2) {
-  //     return num1;
-  //   } else {
-  //     return num2;
-  //   }
-  // }
-
   function max(num1, num2) {
     return num1 > num2 ? num1 : num2;
   }
@@ -31,23 +20,6 @@
   // ---------------------
   // Define a function maxOfThree() that takes three numbers as arguments and returns the largest of them.
   // ---------------------
-  // function maxOfThree(num1, num2, num3) {
-  //   if (typeof num1 !== 'number' ||
-  //     typeof num2 !== 'number' ||
-  //     typeof num3 !== 'number') {
-  //     console.log("At leat one argument is not a number");
-  //   } else if (num1 > num2) {
-  //         if (num1 > num3) {
-  //             return num1;
-  //         } else {
-  //             return num3;
-  //         }
-  //   } else if (num2 > num3) {
-  //     return num2;
-  //   } else {
-  //     return num3;
-  //   }
-  // }
 
   function maxOfThree(num1, num2, num3) {
     return num1 > num2 && num1 > num3 ? num1 : num2 > num3 ? num2 : num3;
@@ -78,7 +50,6 @@
       return newWord.join("");
     }
 
-
     // ---------------------
     // Define a function sum() and a function multiply() that sums and multiplies (respectively) all the numbers in an array of numbers. For example, sum([1,2,3,4]) should return 10, and multiply([1,2,3,4]) should return 24.
     // ---------------------
@@ -99,12 +70,17 @@
         return product;
       }
 
-
     // ---------------------
     // Define a function reverse() that computes the reversal of a string. For example, reverse("jag testar") should return the string "ratset gaj".
     // ---------------------
-
-
+    
+      function reverse(str) {
+        const newStr = [];
+        for (let i = 0; i < str.length; i++) {
+          newStr.unshift(str[i]);
+        }
+        return newStr.join("");
+      }
 
     // ---------------------
     // Define a function findLongestWord() that takes an array of words and returns the length of the longest one.
