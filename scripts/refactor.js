@@ -153,7 +153,6 @@ var spanishColor = function(colorName) {
 
 
 var spanishColor2 = function(colorName) {
-
   const spanishColors = {
     rojo: "#ff0000", 
     blanco: "#ffffff",
@@ -180,6 +179,9 @@ var foo = "bar";
 
 // Put your answer below -------------------------
 
+let foo2;
+foo2 = "bar";
+
 
 // -----------------------------------------------
 
@@ -200,9 +202,15 @@ var callTenTimes = function(callback) {
   range.forEach(callback);
 };
 
+
 // callTenTime(functionName);
 
 // Put your answer below -------------------------
+
+var callNtimes = function(callback, length) {
+  var range = Array.from(Array(length).keys());
+  range.forEach(callback);
+};
 
 
 // -----------------------------------------------
