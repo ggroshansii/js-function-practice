@@ -89,8 +89,10 @@ console.log("The letter is", letter);
 
 // Put your answer below -------------------------
 
-//ANSWER [C] because the timeout function will slightly delay (1ms) the the console.log() that's within the function
-//Before the two console.log statements, letter is updated with a new char and that char is the one that is logged.
+//ANSWER [C] because the timeout function will slightly delay (1ms) 
+//the console.log() that's within the function
+//Before the two console.log statements, letter is updated with 
+//a new char and that char is the one that is logged.
 
 
 // -----------------------------------------------
@@ -290,6 +292,13 @@ var accelerate = function(amount) {
 };
 
 // Put your answer below -------------------------
+
+//The reason it is NaN is because the function is trying to
+//add a number type to an undefined type, which results in NaN
+
+var accelerate2 = function(amount = 1) {
+  speed += amount;
+};
 
 
 
