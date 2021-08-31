@@ -14,48 +14,69 @@
   // ---------------------
 
   //Calculate the largest number of the two parameters
+  // function max(num1, num2) {
+  //   if (typeof num1 !== 'number' || typeof num2 !== 'number') {
+  //     console.log("At leat one argument is not a number");
+  //   } else if (num1 > num2) {
+  //     return num1;
+  //   } else {
+  //     return num2;
+  //   }
+  // }
+
   function max(num1, num2) {
-    if (typeof num1 !== 'number' || typeof num2 !== 'number') {
-      console.log("At leat one argument is not a number");
-    } else if (num1 > num2) {
-      return num1;
-    } else {
-      return num2;
-    }
+    return num1 > num2 ? num1 : num2;
   }
 
   // ---------------------
   // Define a function maxOfThree() that takes three numbers as arguments and returns the largest of them.
   // ---------------------
-  function maxOfThree(num1, num2, num3) {
-    if (typeof num1 !== 'number' ||
-      typeof num2 !== 'number' ||
-      typeof num3 !== 'number') {
-      console.log("At leat one argument is not a number");
-    } else if (num1 > num2) {
-          if (num1 > num3) {
-              return num1;
-          } else {
-              return num3;
-          }
-    } else if (num2 > num3) {
-      return num2;
-    } else {
-      return num3;
-    }
-  }
+  // function maxOfThree(num1, num2, num3) {
+  //   if (typeof num1 !== 'number' ||
+  //     typeof num2 !== 'number' ||
+  //     typeof num3 !== 'number') {
+  //     console.log("At leat one argument is not a number");
+  //   } else if (num1 > num2) {
+  //         if (num1 > num3) {
+  //             return num1;
+  //         } else {
+  //             return num3;
+  //         }
+  //   } else if (num2 > num3) {
+  //     return num2;
+  //   } else {
+  //     return num3;
+  //   }
+  // }
 
-  
+  function maxOfThree(num1, num2, num3) {
+    return num1 > num2 && num1 > num3 ? num1 : num2 > num3 ? num2 : num3;
+  }
 
     // ---------------------
     // Define a function isVowel() that takes a character (i.e. a string of length 1) and returns true if it is a vowel, false otherwise.
     // ---------------------
-
+      function isVowel(char) {
+        return ['a', 'e', 'i', 'o', 'u', " "].includes(char) ? true : false;
+      }
 
     // ---------------------
     // Write a function rovarspraket() that will translate a text into "rövarspråket". That is, double every consonant and place an occurrence of "o" in between. For example, translate("this is fun") should return the string "tothohisos isos fofunon".
     // ---------------------
 
+    function rovarspraket(str) {
+      let newWord =[];
+      let vowels = ['a', 'e', 'i', 'o', 'u', ' '];
+      for(let i = 0; i < str.length; i++) {
+          if (vowels.includes(str[i])) {
+              newWord.push(str[i]);
+          } else {
+
+              newWord.push(str[i], "o", str[i])
+          }
+      }
+      return newWord.join("");
+    }
 
 
     // ---------------------
