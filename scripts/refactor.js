@@ -33,7 +33,7 @@ function doSomethingCool() {
 
 // Put your answer below -------------------------
 
-const doSomethingCool = function() {
+const doSomethingCool2 = function() {
   console.log("Something Cool!");
 }
 
@@ -88,6 +88,9 @@ letter = "z";
 console.log("The letter is", letter);
 
 // Put your answer below -------------------------
+
+//ANSWER [C] because the timeout function will slightly delay (1ms) the the console.log() that's within the function
+//Before the two console.log statements, letter is updated with a new char and that char is the one that is logged.
 
 
 // -----------------------------------------------
