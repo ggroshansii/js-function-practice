@@ -150,10 +150,11 @@
       function charFreq(str) {
         const freqObj = {};
         for (let i = 0; i < str.length; i++) {
-          if (freqObj[str[i]] === undefined) {
-            freqObj[str[i]] = 1;
-          } else {
+          if (freqObj[str[i]]) {
             freqObj[str[i]] += 1;
+
+          } else {
+            freqObj[str[i]] = 1;
           }
         }
         return freqObj;
