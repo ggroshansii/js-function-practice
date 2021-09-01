@@ -242,6 +242,24 @@ var decreaseScore = function() {
 
 // Put your answer below -------------------------
 
+function updateScore() {
+  let score = 0;
+  let increaseScore = () => ++score;
+
+  let decreaseScore = () => --score;
+  
+
+  return {
+    increaseScore,
+    decreaseScore
+  }
+};
+
+let footballScore = updateScore();
+console.log(footballScore.increaseScore());
+console.log(footballScore.increaseScore());
+console.log(footballScore.decreaseScore());
+
 
 // -----------------------------------------------
 
@@ -344,6 +362,11 @@ var callLater = function(timeout, callback) {
 
 // Put your answer below -------------------------
 
+
+var callLater = function(timeout = 1000, callback) {
+  setTimeout(callback,
+     timeout);
+};
 
 // -----------------------------------------------
 
