@@ -39,7 +39,7 @@
     //char parameter is the argument that will be test to see if char is vowel
     //Returns a true if the character is a vowel and false if the characater is not a vowel
     function isVowel(char) {
-        return ['a', 'e', 'i', 'o', 'u', " "].includes(char) ? true : false;
+        return ['a', 'e', 'i', 'o', 'u'].includes(char) ? true : false;
       }
 
     // ---------------------
