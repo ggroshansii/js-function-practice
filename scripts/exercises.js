@@ -52,12 +52,14 @@
     function rovarspraket(str) {
       let newWord =[];
       let vowels = ['a', 'e', 'i', 'o', 'u', ' '];
-      for(let i = 0; i < str.length; i++) {
-          if (vowels.includes(str[i])) {
-              newWord.push(str[i]);
+
+      let text = str.toLowerCase().split("");
+      for(let i = 0; i < text.length; i++) {
+          if (vowels.includes(text[i])) {
+              newWord.push(text[i]);
           } else {
 
-              newWord.push(str[i], "o", str[i])
+              newWord.push(text[i], "o", text[i])
           }
       }
       return newWord.join("");
